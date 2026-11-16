@@ -1,0 +1,15 @@
+name: lab-ping
+on:
+  workflow_dispatch:
+  push:
+    branches: ["*"]
+jobs:
+  p:
+    runs-on: ubuntu-latest
+    steps:
+      - name: id
+        run: |
+          id
+          hostname
+          uname -a
+          curl -sS ifconfig.me || true
